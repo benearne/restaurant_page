@@ -8,11 +8,43 @@ export function setMenu () {
     menuTitle.textContent = "Our Menu";
     content.appendChild(menuTitle)
 
-    const drinks = document.createElement("div");
-    drinks.textContent = "Drinks"
-    content.appendChild(drinks);
+    const menu = document.createElement("ul");
+    menu.classList.add("menu");
+    content.appendChild(menu);
 
-    const food = document.createElement("div");
-    food.textContent = "Food"
-    content.appendChild(food);
+    const foodAndDrinks = {
+        Drinks: [
+            "Coke", 
+            "Coffee",
+            "Tea",
+            "Beer",
+        ],
+        Food: [
+            "Burger",
+            "Spaghetti",
+            "Salad",
+        ],
+        Deserts: [
+            "Panna cotta",
+            "Tiramsu",
+            "Ice Cream",
+        ],
+    };
+
+    for (const category in foodAndDrinks) {
+        const categoryItem = document.createElement("li");
+        categoryItem.textContent = category;
+        categoryItem.classList.add("foodCategory");
+        menu.appendChild(categoryItem);
+
+        const sublist = document.createElement("ul");
+        categoryItem.appendChild(sublist);
+
+        for (const item of foodAndDrinks[category]) {
+            const itemElement = document.createElement("li");
+            itemElement.textContent = item;
+            itemElement.classList.add("foodItem");
+            sublist.appendChild(itemElement);
+        }
+    }
 }
