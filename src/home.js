@@ -1,7 +1,10 @@
 import pizzaImage from "./pizza.png";
 
-export function setContent () {
+export function setHome () {
     const content = document.getElementById("content");
+
+    // clear everything in content
+    content.innerHTML = "";
 
     const restaurantName = document.createElement("h1")
     restaurantName.textContent = "Pizza Pizza Balla Balla";

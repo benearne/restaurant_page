@@ -16,14 +16,19 @@ module.exports = {
   module: {
     rules: [
         {
-            test: /\.html$/,
-            use: {
-                loader: 'html-loader',
-            },
+          test: /\.html$/,
+          use: {
+              loader: 'html-loader',
+          },
         },
         {
-        test: /\.(png|jpe?g|gif|svg)$/i,
-        type: 'asset/resource', // Webpack speichert die Datei und gibt dir die URL
+          test: /\.(png|jpe?g|gif|svg)$/i,
+          type: 'asset/resource', // Webpack speichert die Datei und gibt dir die URL
+        },
+        {
+          test: /\.css$/i,    // Alle Dateien mit Endung .css
+          use: ['style-loader', 'css-loader'], 
+          // css-loader liest CSS ein, style-loader fügt es ins DOM ein
         },
     ],
   },
