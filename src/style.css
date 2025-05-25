@@ -4,6 +4,15 @@
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
     list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(120deg, #fffde7, #fff8e1);
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 40px 20px;
 }
 
 body, div {
@@ -14,46 +23,103 @@ body, div {
 
 nav {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
     gap: 30px;
+    margin-bottom: 40px;
+    background-color: #ffe0b2;
+    padding: 10px 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+nav a {
+    color: #ff9800;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #bf7200;
 }
 
 img {
-    width: 50vw;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 p {
-    width: 60ch;
+    width: 100%;
+    max-width: 60ch;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 h1 {
     margin-bottom: 30px;
 }
 
+#content {
+    width: 100%;
+    max-width: 700px;
+    padding: 20px;
+    background-color: #fffef4;
+    border-radius: 12px;
+}
+
 button {
-    width: 100px;
-    height: 30px;
-    margin-top: 90px;
-    margin-bottom: 50px;
-    border-radius: 20px;
-    border-style: none;
-    box-shadow: 3px 3px 3px gray;
-    background-color: orange;
-    color: white;
+    width: 120px;
+    height: 40px;
+    font-size: 1rem;
+    border-radius: 25px;
+    background-color: #ff9800;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     cursor: pointer;
-     transition: transform 0.5s ease, background-color 0.5s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s;
 }
 
 button:hover {
-    transform: scale(1.09);
-    background-color: rgb(213, 139, 0);
+    transform: translateY(-3px) scale(1.05);
+    background-color: #e68900;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.menu {
+    list-style: none;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff8e1;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 20px;
+    font-family: sans-serif;
 }
 
 .foodCategory {
     font-weight: bold;
-    margin-bottom: 20px;
+    font-size: 1.3rem;
+    color: #ff9800;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ffcc80;
+    padding-bottom: 5px;
 }
 
 .foodItem {
     font-weight: normal;
+    font-size: 1.1rem;
+    margin-left: 20px;
+    margin-bottom: 6px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.foodItem:hover {
+    background-color: #ffe0b2;
+    cursor: pointer;
 }
